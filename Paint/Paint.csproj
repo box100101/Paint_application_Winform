@@ -1,0 +1,232 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A3918823-77EA-4528-A199-22B48A0F0D2D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Paint</RootNamespace>
+    <AssemblyName>Paint</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v21.2" />
+    <Reference Include="DevExpress.Data.Desktop.v21.2" />
+    <Reference Include="DevExpress.Data.v21.2" />
+    <Reference Include="DevExpress.Utils.v21.2" />
+    <Reference Include="DevExpress.Sparkline.v21.2.Core" />
+    <Reference Include="DevExpress.XtraEditors.v21.2" />
+    <Reference Include="DevExpress.Printing.v21.2.Core" />
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="circle.cs" />
+    <Compile Include="ellipse.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="line.cs" />
+    <Compile Include="polygon.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rectangle.cs" />
+    <Compile Include="shape.cs" />
+    <Compile Include="square.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-picture-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-picture-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-picture-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-undo-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-redo-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-paste-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-copy-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-black-large-square-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-black-large-square-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-blue-square-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-orange-square-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-green-square-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-red-square-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-purple-square-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-orange-square-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-yellow-square-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-brown-square-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-circle-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-oval-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-line-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-square-spinner-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-rectangular-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-line-width-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dashed-line-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-new-copy-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-file-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-close-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-color-wheel-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-paint-palette-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-paint-palette-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pencil-drawing-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-erase-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-fill-color-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-fill-color-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-clear-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-fill-circle-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ellipse-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-fill-square-spinner-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-rectangle-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-polygon-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tools-30.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
